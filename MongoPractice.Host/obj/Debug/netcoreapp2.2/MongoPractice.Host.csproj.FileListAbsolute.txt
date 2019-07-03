@@ -1,0 +1,15 @@
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.deps.json
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.runtimeconfig.json
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.runtimeconfig.dev.json
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.dll
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.pdb
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csproj.CoreCompileInputs.cache
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.RazorAssemblyInfo.cache
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.RazorAssemblyInfo.cs
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.AssemblyInfoInputs.cache
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.AssemblyInfo.cs
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.RazorTargetAssemblyInfo.cache
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.dll
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.pdb
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.xml
+F:\Code\C#.Net\.Net Core\MongoPractice\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csprojAssemblyReference.cache

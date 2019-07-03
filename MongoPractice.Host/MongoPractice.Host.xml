@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MongoPractice.Host</name>
+    </assembly>
+    <members>
+        <member name="T:MongoPractice.Host.Controllers.ProductController">
+            <summary>
+            产品控制器
+            </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Get">
+            <summary>
+            获取所有
+            </summary>
+            <returns>所有实体</returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Get(System.String)">
+            <summary>
+            根据id获取
+            </summary>
+            <param name="id"></param>
+            <returns>单个实体</returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Post(System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            新建
+            </summary>
+            <param name="productName">名称</param>
+            <param name="details">详情</param>
+            <param name="img">图片</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Put(System.String,System.String,System.String)">
+            <summary>
+            修改
+            </summary>
+            <param name="id">需要修改的ID</param>
+            <param name="productName">修改后的名称</param>
+            <param name="details">修改后的详情</param>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Delete(System.String)">
+            <summary>
+            根据ID删除
+            </summary>
+            <param name="id">需要删除的实体ID</param>
+            <returns></returns>
+        </member>
+        <member name="P:MongoPractice.Host.Models.BaseModel.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Product.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Product.ProductDetails">
+            <summary>
+            产品详情
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Product.ImgUrl">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="config"></param>
+            <param name="tableName">表名</param>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Get">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Get(System.String)">
+            <summary>
+            获取单个
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Create(`0)">
+            <summary>
+            创建
+            </summary>
+            <param name="T"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Create(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="T"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Update(System.String,`0)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="TIn"></param>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Remove(System.String)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Get``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32)">
+            <summary>
+            分页查询
+            </summary>
+            <typeparam name="S"></typeparam>
+            <param name="orderBy"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="F:MongoPractice.Host.Tool.RandomModel.Character">
+            <summary>
+            字母
+            </summary>
+        </member>
+        <member name="F:MongoPractice.Host.Tool.RandomModel.Number">
+            <summary>
+            数字
+            </summary>
+        </member>
+        <member name="F:MongoPractice.Host.Tool.RandomModel.CharacterNumber">
+            <summary>
+            字母+数据
+            </summary>
+        </member>
+    </members>
+</doc>
