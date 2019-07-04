@@ -26,5 +26,10 @@ namespace MongoPractice.Host.Models
         /// </summary>
         public string ImgUrl { get; set; } = string.Empty;
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        public string UserId { get; set; }
+
     }
 }
