@@ -210,11 +210,12 @@
             <param name="id">需要删除的实体ID</param>
             <returns></returns>
         </member>
-        <member name="M:MongoPractice.Host.Controllers.ProductController.Comment(System.String,System.String)">
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Comment(System.String,System.String,System.String)">
             <summary>
             评论文章
             </summary>
             <param name="id">文章ID</param>
+            <param name="formId">回复评论的ID（为空则为评论，不为空则为回复评论）</param>
             <param name="content">评论内容</param>
             <returns></returns>
         </member>
@@ -312,6 +313,11 @@
             用户名
             </summary>
         </member>
+        <member name="P:MongoPractice.Host.Models.Comment.FormId">
+            <summary>
+            这是回复哪一条评论的Id？
+            </summary>
+        </member>
         <member name="T:MongoPractice.Host.Models.Product">
              <summary>
             文章
@@ -398,6 +404,11 @@
             <param name="TIn"></param>
         </member>
         <member name="M:MongoPractice.Host.Services.BaseService`1.Remove(System.String)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             删除
             </summary>

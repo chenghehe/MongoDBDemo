@@ -206,8 +206,8 @@ namespace MongoPractice.Host.Areas.Admin.Controllers
             }
             try
             {
-                var cIndex = entiy.Comments.FindIndex(x => x.Id == cId);
-                entiy.Comments.RemoveAt(cIndex);
+                //删除评论以及相关的回复
+                entiy.Comments.RemoveAll(x => x.Id == cId || x.FormId == cId);
                 var result = await _productService.Update(id, entiy);
                 return Ok(result);
             }

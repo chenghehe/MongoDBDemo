@@ -37,5 +37,9 @@ namespace MongoPractice.Host.Models
         /// </summary>
         public string UserName { get; set; }
 
+        /// <summary>
+        /// 这是回复哪一条评论的Id？
+        /// </summary>
+        public string FormId { get; set; }
     }
 }

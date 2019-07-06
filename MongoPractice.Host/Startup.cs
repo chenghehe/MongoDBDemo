@@ -78,7 +78,7 @@ namespace MongoPractice.Host
                 s.SwaggerDoc("v1", new Info
                 {
                     Title = "用户",
-                    Description = "文章系统的前台站点接口：\n<h3>注册---》登录---》发布文章---》点赞/评论文章</h3>",
+                    Description = "文章系统的前台站点接口：\n<h3>注册---》登录---》发布文章---》点赞/评论（回复评论）文章</h3>",
                     Version = "v1",
                 });
                 s.SwaggerDoc("admin", new Info

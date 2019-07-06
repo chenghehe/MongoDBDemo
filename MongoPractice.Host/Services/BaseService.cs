@@ -17,7 +17,7 @@ namespace MongoPractice.Host.Services
         /// 构造函数
         /// </summary>
         /// <param name="config"></param>
-        public BaseService(IConfiguration config,string tableName)
+        public BaseService(IConfiguration config, string tableName)
         {
             var client = new MongoClient(config.GetConnectionString("MongoConnection"));    //获取链接字符串
             var database = client.GetDatabase(config.GetConnectionString("DataBase"));   //数据库名 （不存在自动创建）
@@ -81,6 +81,14 @@ namespace MongoPractice.Host.Services
         public async Task<bool> Remove(string id)
         {
             var result = await _collection.DeleteOneAsync(x => x.Id == id); /*DeleteOneAsync(Builders<T>.Filter.Eq("Id", id);*/
+            return result.IsAcknowledged && result.DeletedCount > 0;
+        }
+        /// <summary>
+        /// 删除
+        /// </summary>
+        public async Task<bool> Remove(System.Linq.Expressions.Expression<Func<T, bool>> deleteExpression)
+        {
+            var result = await _collection.DeleteOneAsync(deleteExpression); /*DeleteOneAsync(Builders<T>.Filter.Eq("Id", id);*/
             return result.IsAcknowledged && result.DeletedCount > 0;
         }
         public async Task<bool> Remove()

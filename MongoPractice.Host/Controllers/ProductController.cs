@@ -215,10 +215,13 @@ namespace MongoPractice.Host.Controllers
         /// 评论文章
         /// </summary>
         /// <param name="id">文章ID</param>
+        /// <param name="formId">回复评论的ID（为空则为评论，不为空则为回复评论）</param>
         /// <param name="content">评论内容</param>
         /// <returns></returns>
         [HttpPost(nameof(Comment))]
-        public async Task<IActionResult> Comment([Required]string id, [Required, StringLength(100, ErrorMessage = "评论内容不能超过一百字")]string content)
+        public async Task<IActionResult> Comment([Required]string id,
+            string formId,
+            [Required, StringLength(100, ErrorMessage = "评论内容不能超过一百字")]string content)
         {
             if (!ModelState.IsValid)
             {
@@ -239,6 +242,7 @@ namespace MongoPractice.Host.Controllers
                 Content = content,
                 UserName = user.UserName,
                 UserId = user.Id.ToString(),
+                FormId = entiy.Comments.Any(x => x.Id == formId) ? formId : default(string),
             });
             var updateResult = await _productService.Update(id, entiy);
             return Ok(updateResult);
@@ -295,6 +299,8 @@ namespace MongoPractice.Host.Controllers
                 x.UserName,
                 x.CreateTime,
                 x.Content,
+                x.FormId,
+                x.Id,
             }));
         }
 
