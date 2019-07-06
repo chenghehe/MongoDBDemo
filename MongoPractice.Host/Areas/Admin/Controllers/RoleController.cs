@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,14 +14,13 @@ namespace MongoPractice.Host.Controllers
     /// <summary>
     /// 角色管理控制器
     /// </summary>
-    [Route("api/[controller]")]
     //[ApiController]
+    [Route("api/admin/[controller]"),/* Authorize(Policy = "管理员"),*/ ApiExplorerSettings(GroupName = "admin")]
     public class RoleController : ControllerBase
     {
         #region 服务注入
         private readonly UserManager<ApplicationUser> _userManager;
         public readonly RoleManager<ApplicationRole> _roleManager;
-
         public RoleController(
             UserManager<ApplicationUser> userManager,
             RoleManager<ApplicationRole> roleManager)

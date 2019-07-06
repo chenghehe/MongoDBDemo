@@ -19,7 +19,6 @@ C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\bin\Debug\netcoreapp2.
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.dll
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.pdb
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\bin\Debug\netcoreapp2.2\MongoPractice.Host.xml
-C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csprojAssemblyReference.cache
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csproj.CoreCompileInputs.cache
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.RazorAssemblyInfo.cache
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.RazorAssemblyInfo.cs
@@ -30,3 +29,4 @@ C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.pdb
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.Identity.MongoDBCore.Resources.resources
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csproj.GenerateResource.cache
+C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csprojAssemblyReference.cache

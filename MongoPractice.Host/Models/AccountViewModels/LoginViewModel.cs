@@ -5,11 +5,10 @@ namespace MongoPractice.Host.Models.AccountViewModels
     public class LoginViewModel
     {
         /// <summary>
-        /// 邮箱
+        /// 用户名
         /// </summary>
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string UserName { get; set; }
 
         /// <summary>
         /// 密码

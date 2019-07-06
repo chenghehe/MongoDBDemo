@@ -17,8 +17,7 @@ namespace MongoPractice.Host.Services
         /// 构造函数
         /// </summary>
         /// <param name="config"></param>
-        /// <param name="tableName">表名</param>
-        public BaseService(IConfiguration config, string tableName)
+        public BaseService(IConfiguration config,string tableName)
         {
             var client = new MongoClient(config.GetConnectionString("MongoConnection"));    //获取链接字符串
             var database = client.GetDatabase(config.GetConnectionString("DataBase"));   //数据库名 （不存在自动创建）

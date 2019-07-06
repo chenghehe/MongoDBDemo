@@ -56,8 +56,8 @@ namespace MongoPractice.Host
                     .AddDefaultTokenProviders();
 
             services.AddAuthorization(option =>
-            {                
-                option.AddPolicy("管理员", polic => polic.RequireRole("管理员"));//添加基于policy策略的权限授权
+            {
+                option.AddPolicy("管理员", polic => polic.RequireRole("管理员", "admin"));//添加基于policy策略的权限授权
             });
 
             #endregion
@@ -77,8 +77,14 @@ namespace MongoPractice.Host
             {
                 s.SwaggerDoc("v1", new Info
                 {
-                    Title = "MongoPractice API",
-                    Description = "MongoPractice 站点接口",
+                    Title = "用户",
+                    Description = "文章系统的前台站点接口：\n<h3>注册---》登录---》发布文章---》点赞/评论文章</h3>",
+                    Version = "v1",
+                });
+                s.SwaggerDoc("admin", new Info
+                {
+                    Title = "管理员",
+                    Description = "管理员接口：\n<h3>分配用户角色、管理文章、管理文章分类</h3>",
                     Version = "v1",
                 });
 
@@ -89,6 +95,7 @@ namespace MongoPractice.Host
 
             #region 服务注入
             services.AddScoped<ProductService>();
+            services.AddScoped<CategoryService>();
             #endregion
         }
 
@@ -106,7 +113,9 @@ namespace MongoPractice.Host
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MongoPractice API V1"); c.RoutePrefix = string.Empty;
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "用户");
+                c.SwaggerEndpoint("/swagger/admin/swagger.json", "管理员");
+                c.RoutePrefix = string.Empty;
             });
         }
     }

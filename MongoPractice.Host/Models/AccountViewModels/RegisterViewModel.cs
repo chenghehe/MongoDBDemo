@@ -17,6 +17,12 @@ namespace MongoPractice.Host.Models.AccountViewModels
         public string Email { get; set; }
 
         /// <summary>
+        /// 用户名
+        /// </summary>
+        [Required]
+        public string UserName { get; set; }
+
+        /// <summary>
         /// 密码
         /// </summary>
         [Required]

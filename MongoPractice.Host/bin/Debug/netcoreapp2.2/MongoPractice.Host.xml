@@ -4,6 +4,140 @@
         <name>MongoPractice.Host</name>
     </assembly>
     <members>
+        <member name="T:MongoPractice.Host.Areas.Admin.Controllers.CategoryController">
+            <summary>
+            分类控制器
+            需要管理员权限
+            </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.CategoryController.Get">
+            <summary>
+            获取所有分类，需要管理员权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.CategoryController.Get(System.String)">
+            <summary>
+            根据ID获取，需要管理员权限
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.CategoryController.Post(MongoPractice.Host.Areas.Admin.Models.CategoryViewModels.PostViewModel)">
+            <summary>
+            添加，需要管理员权限
+            </summary>
+            <param name="postViewModel">添加的实体</param>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.CategoryController.Put(System.String,System.String,System.String)">
+            <summary>
+            修改，需要管理员权限
+            </summary>
+            <param name="id">类别Id</param>
+            <param name="name">类别名称</param>
+            <param name="details">详情</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.CategoryController.Delete(System.String)">
+            <summary>
+            删除，需要管理员权限
+            </summary>
+            <param name="id">需要删除的分类ID</param>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.Get">
+            <summary>
+            获取所有，所有方法需要管理员权限
+            </summary>
+            <returns>所有实体</returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.Get(System.String)">
+            <summary>
+            根据id获取
+            </summary>
+            <param name="id"></param>
+            <returns>单个实体</returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.Post(System.String,System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            添加
+            </summary>
+            <param name="id">类别Id</param>
+            <param name="productName">名称</param>
+            <param name="details">详情</param>
+            <param name="img">图片</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.Put(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改
+            </summary>
+            <param name="id">需要修改的ID</param>
+            <param name="productName">修改后的名称</param>
+            <param name="details">修改后的详情</param>
+            <param name="cId">类别Id</param>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.Delete(System.String)">
+            <summary>
+            根据ID删除
+            </summary>
+            <param name="id">需要删除的实体ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.DeleteComment(System.String,System.String)">
+            <summary>
+            删除评论
+            </summary>
+            <param name="id">文章Id</param>
+            <param name="cId">评论Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Areas.Admin.Controllers.ProductController.GetComment(System.String)">
+            <summary>
+            获取文章的评论内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MongoPractice.Host.Controllers.RoleController">
+            <summary>
+            角色管理控制器
+            </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.RoleController.POST(System.String)">
+            <summary>
+            添加角色
+            </summary>
+            <param name="roleName">角色名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.RoleController.Get">
+            <summary>
+            获取所有角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.RoleController.Put(System.String,System.String)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="id">角色ID</param>
+            <param name="roleName">角色名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.RoleController.Delete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="id">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.RoleController.UserToRole(System.String,System.String)">
+            <summary>
+            添加用户到某个角色
+            </summary>
+            <param name="uid">用户ID</param>
+            <param name="roleId">角色ID</param>
+            <returns></returns>
+        </member>
         <member name="M:MongoPractice.Host.Controllers.AccountController.GET">
             <summary>
             获取所有用户
@@ -50,22 +184,24 @@
             <param name="id"></param>
             <returns>单个实体</returns>
         </member>
-        <member name="M:MongoPractice.Host.Controllers.ProductController.Post(System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Post(System.String,System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
             <summary>
             添加
             </summary>
-            <param name="productName">名称</param>
-            <param name="details">详情</param>
-            <param name="img">图片</param>
+            <param name="id">类别Id</param>
+            <param name="productName">文章标题</param>
+            <param name="details">文章内容</param>
+            <param name="img">文章图片（目前是单张图）</param>
             <returns></returns>
         </member>
-        <member name="M:MongoPractice.Host.Controllers.ProductController.Put(System.String,System.String,System.String)">
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Put(System.String,System.String,System.String,System.String)">
             <summary>
             修改
             </summary>
             <param name="id">需要修改的ID</param>
             <param name="productName">修改后的名称</param>
             <param name="details">修改后的详情</param>
+            <param name="cId">类别Id</param>
         </member>
         <member name="M:MongoPractice.Host.Controllers.ProductController.Delete(System.String)">
             <summary>
@@ -74,50 +210,36 @@
             <param name="id">需要删除的实体ID</param>
             <returns></returns>
         </member>
-        <member name="T:MongoPractice.Host.Controllers.RoleController">
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Comment(System.String,System.String)">
             <summary>
-            角色管理控制器
+            评论文章
             </summary>
-        </member>
-        <member name="M:MongoPractice.Host.Controllers.RoleController.POST(System.String)">
-            <summary>
-            添加角色
-            </summary>
-            <param name="roleName">角色名称</param>
+            <param name="id">文章ID</param>
+            <param name="content">评论内容</param>
             <returns></returns>
         </member>
-        <member name="M:MongoPractice.Host.Controllers.RoleController.Get">
+        <member name="M:MongoPractice.Host.Controllers.ProductController.Fabulous(System.String)">
             <summary>
-            获取所有角色
+            点赞文章/取消点赞，点一次是赞，赞了再点就是取消
+            </summary>
+            <param name="id">文章Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.GetComment(System.String)">
+            <summary>
+            获取文章的评论内容
             </summary>
             <returns></returns>
         </member>
-        <member name="M:MongoPractice.Host.Controllers.RoleController.Put(System.String,System.String)">
+        <member name="M:MongoPractice.Host.Controllers.ProductController.GetCategory">
             <summary>
-            修改角色
+            获取所有分类
             </summary>
-            <param name="id">角色ID</param>
-            <param name="roleName">角色名称</param>
             <returns></returns>
         </member>
-        <member name="M:MongoPractice.Host.Controllers.RoleController.Delete(System.String)">
+        <member name="P:MongoPractice.Host.Models.AccountViewModels.LoginViewModel.UserName">
             <summary>
-            删除角色
-            </summary>
-            <param name="id">角色ID</param>
-            <returns></returns>
-        </member>
-        <member name="M:MongoPractice.Host.Controllers.RoleController.UserToRole(System.String,System.String)">
-            <summary>
-            添加用户到某个角色
-            </summary>
-            <param name="uid">用户ID</param>
-            <param name="roleId">角色ID</param>
-            <returns></returns>
-        </member>
-        <member name="P:MongoPractice.Host.Models.AccountViewModels.LoginViewModel.Email">
-            <summary>
-            邮箱
+            用户名
             </summary>
         </member>
         <member name="P:MongoPractice.Host.Models.AccountViewModels.LoginViewModel.Password">
@@ -135,6 +257,11 @@
             邮箱
              </summary>
         </member>
+        <member name="P:MongoPractice.Host.Models.AccountViewModels.RegisterViewModel.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
         <member name="P:MongoPractice.Host.Models.AccountViewModels.RegisterViewModel.Password">
             <summary>
             密码
@@ -149,6 +276,46 @@
             <summary>
             创建时间
             </summary>
+        </member>
+        <member name="M:MongoPractice.Host.Models.Category.#ctor">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Category.Name">
+            <summary>
+            类别名称
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Category.Details">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="T:MongoPractice.Host.Models.Comment">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Comment.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Comment.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Comment.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="T:MongoPractice.Host.Models.Product">
+             <summary>
+            文章
+             </summary>
         </member>
         <member name="P:MongoPractice.Host.Models.Product.ProductName">
             <summary>
@@ -170,12 +337,31 @@
             用户ID
             </summary>
         </member>
+        <member name="P:MongoPractice.Host.Models.Product.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Product.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Product.Comments">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.Product.Fabulous">
+            <summary>
+            点赞的用户
+            </summary>
+        </member>
         <member name="M:MongoPractice.Host.Services.BaseService`1.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
             <summary>
             构造函数
             </summary>
             <param name="config"></param>
-            <param name="tableName">表名</param>
         </member>
         <member name="M:MongoPractice.Host.Services.BaseService`1.Get">
             <summary>
@@ -225,6 +411,16 @@
             <param name="pageIndex"></param>
             <param name="pageSize"></param>
             <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Tool.ModelHelper.EntityMerge``2(``0,``1)">
+            <summary>
+            更新实体模型
+            </summary>
+            <typeparam name="In">源实体类型</typeparam>
+            <typeparam name="Out">最终合并后返回的实体类型</typeparam>
+            <param name="inModel">源数据实体</param>
+            <param name="outModel">最终合并后返回的实体</param>
+            <returns>最终实体</returns>
         </member>
         <member name="F:MongoPractice.Host.Tool.RandomModel.Character">
             <summary>
