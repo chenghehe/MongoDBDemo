@@ -110,8 +110,7 @@ namespace MongoPractice.Host
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
             app.UseMvc();
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            app.UseSwagger().UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "用户");
                 c.SwaggerEndpoint("/swagger/admin/swagger.json", "管理员");

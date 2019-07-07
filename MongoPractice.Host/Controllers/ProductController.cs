@@ -23,11 +23,11 @@ namespace MongoPractice.Host.Controllers
     public class ProductController : ControllerBase
     {
         #region ctor
-        readonly ProductService _productService;
-        readonly CategoryService _categoryService;
-        readonly IConfiguration _configuration;
-        readonly IHostingEnvironment _hostingEnvironment;
-        readonly UserManager<ApplicationUser> _userManager;
+        private readonly ProductService _productService;
+        private readonly CategoryService _categoryService;
+        private readonly IConfiguration _configuration;
+        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public ProductController(
             ProductService productService,
@@ -97,6 +97,28 @@ namespace MongoPractice.Host.Controllers
                 entiy.Fabulous,
                 FabulousCount = entiy.Fabulous.Count,
             });
+        }
+
+        /// <summary>
+        /// 获取自己发布的
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet(nameof(GetMyProduct))]
+        public async Task<ActionResult<IEnumerable<string>>> GetMyProduct()
+        {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            var entiys = await _productService.Get(x => x.UserId == user.Id.ToString());
+            var result = entiys.Select(x => new
+            {
+                x.ProductName,
+                x.ProductDetails,
+                ImgUrl = _configuration.GetSection("url").Value + x.ImgUrl,
+                x.Id,
+                x.UserId,
+                x.UserName,
+                FabulousCount = x.Fabulous.Count,
+            });
+            return new JsonResult(result);
         }
 
         /// <summary>
@@ -319,5 +341,8 @@ namespace MongoPractice.Host.Controllers
                 x.Id
             }));
         }
+
+
+
     }
 }

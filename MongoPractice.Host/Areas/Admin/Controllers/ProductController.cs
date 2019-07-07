@@ -20,12 +20,12 @@ namespace MongoPractice.Host.Areas.Admin.Controllers
     [Route("api/Admin/[controller]"), Authorize(Policy = "管理员"), ApiExplorerSettings(GroupName = "admin")]
     public class ProductController : ControllerBase
     {
-        readonly CategoryService _categoryService;
-        readonly ProductService _productService;
-        readonly IConfiguration _configuration;
-        readonly IHostingEnvironment _hostingEnvironment;
-        readonly UserManager<ApplicationUser> _userManager;
-        readonly ILogger _logger;
+        private readonly CategoryService _categoryService;
+        private readonly ProductService _productService;
+        private readonly IConfiguration _configuration;
+        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILogger _logger;
         public ProductController(
             ProductService productService,
             IConfiguration configuration,

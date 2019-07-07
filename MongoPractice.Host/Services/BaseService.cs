@@ -17,6 +17,7 @@ namespace MongoPractice.Host.Services
         /// 构造函数
         /// </summary>
         /// <param name="config"></param>
+        /// <param name="tableName"></param>
         public BaseService(IConfiguration config, string tableName)
         {
             var client = new MongoClient(config.GetConnectionString("MongoConnection"));    //获取链接字符串
@@ -35,6 +36,13 @@ namespace MongoPractice.Host.Services
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<T>> Get() => await _collection.Find(T => true).ToListAsync();
+
+        /// <summary>
+        /// 根据某个条件获取
+        /// </summary>
+        /// <param name="whereExpression">需要筛选的表达式目录树</param>
+        /// <returns></returns>
+        public async Task<IEnumerable<T>> Get(System.Linq.Expressions.Expression<Func<T, bool>> whereExpression) => await _collection.Find(whereExpression).ToListAsync();
 
         /// <summary>
         /// 获取单个

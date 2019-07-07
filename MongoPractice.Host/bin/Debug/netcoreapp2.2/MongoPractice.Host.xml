@@ -184,6 +184,12 @@
             <param name="id"></param>
             <returns>单个实体</returns>
         </member>
+        <member name="M:MongoPractice.Host.Controllers.ProductController.GetMyProduct">
+            <summary>
+            获取自己发布的
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:MongoPractice.Host.Controllers.ProductController.Post(System.String,System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
             <summary>
             添加
@@ -236,6 +242,13 @@
             <summary>
             获取所有分类
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Controllers.UserController.ChangePassword(MongoPractice.Host.Models.UserViewModels.ChangePasswordViewModel)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="changePasswordViewModel"></param>
             <returns></returns>
         </member>
         <member name="P:MongoPractice.Host.Models.AccountViewModels.LoginViewModel.UserName">
@@ -363,16 +376,39 @@
             点赞的用户
             </summary>
         </member>
+        <member name="P:MongoPractice.Host.Models.UserViewModels.ChangePasswordViewModel.OldPassword">
+            <summary>
+            原密码
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.UserViewModels.ChangePasswordViewModel.Password">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:MongoPractice.Host.Models.UserViewModels.ChangePasswordViewModel.ConfirmPassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
         <member name="M:MongoPractice.Host.Services.BaseService`1.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
             <summary>
             构造函数
             </summary>
             <param name="config"></param>
+            <param name="tableName"></param>
         </member>
         <member name="M:MongoPractice.Host.Services.BaseService`1.Get">
             <summary>
             获取所有
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoPractice.Host.Services.BaseService`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据某个条件获取
+            </summary>
+            <param name="whereExpression">需要筛选的表达式目录树</param>
             <returns></returns>
         </member>
         <member name="M:MongoPractice.Host.Services.BaseService`1.Get(System.String)">
