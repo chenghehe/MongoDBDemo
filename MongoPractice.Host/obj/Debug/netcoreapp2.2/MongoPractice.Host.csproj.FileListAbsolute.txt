@@ -29,4 +29,3 @@ C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.pdb
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.Identity.MongoDBCore.Resources.resources
 C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csproj.GenerateResource.cache
-C:\Users\程呵呵\Desktop\MongodbDemo\MongoPractice.Host\obj\Debug\netcoreapp2.2\MongoPractice.Host.csprojAssemblyReference.cache
